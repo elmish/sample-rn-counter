@@ -1,0 +1,20 @@
+{
+  "name": "counter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "fable-splitter -c splitter.config.js --define RELEASE",
+    "watch": "fable-splitter -c splitter.config.js -w --define DEBUG"
+  },
+  "dependencies": {
+    "core-js": "^2.5.1",
+    "react": "~16.0.0",
+    "react-native": "^0.50.0",
+    "remotedev": "^0.2.3"
+  },
+  "devDependencies": {
+    "fable-splitter": "^0.1.18",
+    "babel-preset-react-native": "4.0.0",
+    "babel-core": "^6.26.0"
+  }
+}
