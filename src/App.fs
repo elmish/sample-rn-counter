@@ -28,7 +28,7 @@ let init () =
 let update (msg:Msg) count =
   match msg with
   | Increment ->
-      count + 2
+      count + 1
 
   | Decrement ->
       count - 1
