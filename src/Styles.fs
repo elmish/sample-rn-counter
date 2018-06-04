@@ -30,14 +30,14 @@ let [<Literal>] titleFontSize = 17.
 
 let [<Literal>] borderRadius = 4.
 
-let inline buttonStyle<'a> =
+let buttonStyle<'a> =
     TouchableHighlightProperties.Style [
         BackgroundColor brandPrimary
         BorderRadius borderRadius
         Margin 5.
       ]
 
-let inline defaultText<'a> =
+let defaultText<'a> =
     TextProperties.Style [ 
         Color textColor
         TextAlign TextAlignment.Center
@@ -45,7 +45,7 @@ let inline defaultText<'a> =
         FontSize fontSizeBase
       ]
 
-let inline titleText<'a> =
+let titleText<'a> =
     TextProperties.Style [ 
         Color textColor
         TextAlign TextAlignment.Center
@@ -53,7 +53,7 @@ let inline titleText<'a> =
         FontSize titleFontSize
       ] 
 
-let inline sceneBackground<'a> =
+let sceneBackground<'a> =
     ViewProperties.Style [ 
         AlignSelf Alignment.Stretch
         Padding 20.
@@ -65,14 +65,14 @@ let inline sceneBackground<'a> =
         BackgroundColor backgroundColor
       ]
 
-let inline button label onPress =
+let button label onPress =
     text [ defaultText ] label
     |> touchableHighlightWithChild [
         buttonStyle
         TouchableHighlightProperties.UnderlayColor touched
         OnPress onPress]
 
-let inline verticalButton label onPress =
+let verticalButton label onPress =
     text [ defaultText ] label
     |> touchableHighlightWithChild [
         TouchableHighlightProperties.Style [
