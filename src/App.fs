@@ -1,11 +1,5 @@
 ﻿module AwesomeApp
 
-open System
-open Fable.Core
-open Fable.Import
-open Fable.Import.ReactNative
-open Fable.Helpers.ReactNative
-open Fable.Helpers.ReactNative.Props
 
 open Elmish
 

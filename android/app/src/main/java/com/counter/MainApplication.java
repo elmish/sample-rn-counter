@@ -31,7 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
       return "index";
     }
   };
-  
+
   @Override
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
