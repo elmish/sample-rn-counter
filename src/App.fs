@@ -29,23 +29,21 @@ let update (msg:Msg) count =
 
 
 // rendering views with ReactNative
-module R = Fable.Helpers.ReactNative
+open Fable.ReactNative
 
 let view count (dispatch:Dispatch<Msg>) =
   let onClick msg =
     fun () -> msg |> dispatch 
 
-  R.view [Styles.sceneBackground]
+  view [Styles.sceneBackground]
     [ Styles.button "-" (onClick Decrement)
-      R.text [] (string count)
+      text [] (string count)
       Styles.button "+" (onClick Increment) ]
 
 open Elmish.ReactNative
-open Elmish.HMR
 
 // App
 Program.mkSimple init update view
 |> Program.withConsoleTrace
-|> Program.withHMR
 |> Program.withReactNative "counter"
 |> Program.run

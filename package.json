@@ -3,20 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "fable-splitter -c splitter.config.js --define RELEASE",
-    "watch": "fable-splitter -c splitter.config.js -w --define DEBUG"
+    "setup": "scripts/setup-native.sh",
+    "build": "dotnet fable src/app.fsproj -o out --define RELEASE",
+    "watch": "dotnet fable watch src/app.fsproj -o out --define DEBUG",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start"
   },
   "dependencies": {
-    "buffer": "5.0.8",
-    "core-js": "^2.5.1",
-    "react": "~16.0.0",
-    "react-native": "^0.55.4",
-    "remotedev": "^0.2.3"
+    "@react-native-community/netinfo": "^9.5.0",
+    "react": "18.2.0",
+    "react-native": "0.71.19",
+    "react-native-safe-area-context": "^4.8.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-react-native": "4.0.0",
-    "fable-splitter": "^0.1.18",
-    "rnpm-plugin-windows": "^0.2.8"
+    "@babel/core": "^7.20.0",
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native-community/cli": "^10.0.0",
+    "@react-native-community/cli-platform-android": "^10.0.0",
+    "@react-native-community/cli-platform-ios": "^10.0.0",
+    "metro-react-native-babel-preset": "0.73.10"
   }
 }

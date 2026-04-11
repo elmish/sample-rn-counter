@@ -1,18 +1,11 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "command": "dotnet",
-    "isShellCommand": true,
-    "showOutput": "always",
-    "suppressTaskName": true,
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "watch",
-            "options": {
-                "cwd": "${workspaceRoot}/src"
-            },
-            "args": [ "fable","yarn-watch" ],
+            "label": "fable-watch",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [ "fable", "watch", "src/app.fsproj", "-o", "out", "--define", "DEBUG" ],
             "isBackground": true,
             "problemMatcher": "$msCompile"
         }

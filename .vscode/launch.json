@@ -3,26 +3,19 @@
     "configurations": [
         {
             "name": "Debug Android",
-            "program": "${workspaceRoot}/.vscode/launchReactNative.js",
             "type": "reactnative",
             "request": "launch",
             "platform": "android",
-            "preLaunchTask": "firstbuild",
-            "internalDebuggerPort": 9090,
-            "sourceMaps": true,
-            "outDir": "${workspaceRoot}/.vscode/.react"
+            "preLaunchTask": "fable-watch",
+            "sourceMaps": true
         },
         {
             "name": "Debug iOS",
-            "program": "${workspaceRoot}/.vscode/launchReactNative.js",
             "type": "reactnative",
             "request": "launch",
             "platform": "ios",
-            "target": "iPhone 6",
-            "preLaunchTask": "firstbuild",
-            "internalDebuggerPort": 9090,
-            "sourceMaps": true,
-            "outDir": "${workspaceRoot}/.vscode/.react"
+            "preLaunchTask": "fable-watch",
+            "sourceMaps": true
         }
     ]
 }

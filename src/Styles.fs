@@ -1,7 +1,7 @@
 module internal Styles
 
-open Fable.Helpers.ReactNative
-open Fable.Helpers.ReactNative.Props
+open Fable.ReactNative
+open Fable.ReactNative.Props
 
 let [<Literal>] brandPrimary = "#428bca"
 let [<Literal>] brandInfo = "#5bc0de"
@@ -30,29 +30,29 @@ let buttonStyle<'a> =
     TouchableHighlightProperties.Style [
         BackgroundColor brandPrimary
         BorderRadius borderRadius
-        Margin 5.
+        Margin (dip 5.)
       ]
 
 let defaultText<'a> =
     TextProperties.Style [ 
-        Color textColor
+        TextStyle.Color textColor
         TextAlign TextAlignment.Center
-        Margin 5.
+        Margin (dip 5.)
         FontSize fontSizeBase
       ]
 
 let titleText<'a> =
     TextProperties.Style [ 
-        Color textColor
+        TextStyle.Color textColor
         TextAlign TextAlignment.Center
-        Margin 15.
+        Margin (dip 15.)
         FontSize titleFontSize
       ] 
 
 let sceneBackground<'a> =
     ViewProperties.Style [ 
         AlignSelf Alignment.Stretch
-        Padding 20.
+        Padding (dip 20.)
         ShadowColor shadowColor
         ShadowOpacity 0.8
         ShadowRadius 3.
@@ -74,8 +74,8 @@ let verticalButton label onPress =
         TouchableHighlightProperties.Style [
             BackgroundColor brandPrimary
             BorderRadius borderRadius
-            Margin 5.
-            Padding 5.
+            Margin (dip 5.)
+            Padding (dip 5.)
         ]
         TouchableHighlightProperties.UnderlayColor touched
         OnPress onPress]

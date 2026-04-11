@@ -1,9 +1,7 @@
 # OSX
-#
 .DS_Store
 
 # Xcode
-#
 build/
 *.pbxuser
 !default.pbxuser
@@ -20,30 +18,55 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+**/.xcode.env.local
 
-# Android/IJ
-#
-*.iml
+# Android/IntelliJ
 .idea
 .gradle
 local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+.kotlin/
 
-# node.js
-#
+# Node
 node_modules/
 npm-debug.log
+yarn-error.log
 
-# BUCK
-buck-out/
-\.buckd/
-android/app/libs
-android/keystores/debug.keystore
+# fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
 
-# Fable
+# Bundle artifact
+*.jsbundle
+
+# Ruby / CocoaPods
+**/Pods/
+/vendor/bundle/
+
+# Metro health check
+.metro-health-check*
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Fable output
 out/
+
+# Generated native projects (recreate with: npm run setup)
+ios/
+android/
+
+# .NET
+src/bin/
 src/obj/
-packages/
-paket-files/
-.vscode/.react/
-.vscode/launchReactNative.js
